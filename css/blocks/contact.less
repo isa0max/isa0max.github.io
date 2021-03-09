@@ -1,0 +1,103 @@
+// main: ../style.less
+
+.contact {
+    display: flex;
+    // background: url(https://placehold.it/477x700) right center no-repeat;
+}
+
+
+// Левая часть
+
+.contact__left {
+    width: 47%;
+    padding: 2rem;
+}
+
+.contact__info {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    font-size: 0.94rem;
+    color: @black;
+    font-weight: 300;
+
+}
+
+.contact__info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+
+    &:last-child {
+        margin-bottom: 3rem;
+    }
+}
+
+.contact__info-icon {
+    margin-right: .75rem;
+}
+
+
+// Правая часть
+
+.contact__right {
+    width: 53%;
+    // background: @black url(https://placehold.it/480x700) center no-repeat;
+}
+
+.Block{
+	position: absolute;
+    margin-top: 15rem;
+    margin-left: 7rem;
+	width: 30%;
+	height: 50%;
+
+    &:hover .imgcont{
+        transform: scale(2);
+        opacity: 0;
+    }
+
+    &:hover .imgstr{
+        transform: scale(2);
+        opacity: 1;
+        transition: 1.5s;
+    }
+
+    &:hover .textcont{
+        margin-top: -180%;
+    }
+}
+
+.imgcont{
+	position: absolute;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+	width: 17rem;
+	height: 17rem;
+	border-radius: 22px 22px;
+	animation: my-anim 1.5s ;
+	transition: 1s;
+}
+
+.imgstr{
+    margin-top: auto;
+    margin-left:auto; 
+	max-width: 90%;
+	height: 18rem;
+	border-radius: 11px 11px;
+	opacity: 0;
+}
+
+.textcont{
+	color: @black;
+	position: absolute;
+  	margin-left: 30%;
+  	margin-top: -120%;
+  	font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+  	font-size: 1vw;
+  	animation: my-an 3s ;
+  	transition: 1.4s;
+}
